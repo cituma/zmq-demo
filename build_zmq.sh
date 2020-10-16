@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ZMQ_INSTALL_DIR=$PWD/libs
+
+cd $ZMQ_INSTALL_DIR
+cmake ../libzmq/ -D WITH_PERF_TOOL=OFF -D ZMQ_BUILD_TESTS=OFF -D ENABLE_CPACK=OFF -D CMAKE_BUILD_TYPE=Debug
+make -j8
+
+cd -
